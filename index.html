@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Indexed DB | Users Table</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+        <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="./css/bootstrap-utilities.min.css" />
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+        <!-- Main Style -->
+        <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- Scripts -->
+        <script type="module" src="./js/script.js" defer></script>
+        <script src="./js/main.js"></script>
+
+        <!-- SweetAlert -->
+        <script src="./js/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="container-fluid py-3 px-4 bg-dark shadow">
+            <h3 class="display-6">
+                <a
+                    href=""
+                    class="text-warning text-center text-lg-left text-decoration-none"
+                >
+                    IndexedDB <span class="text-light">Table</span>
+                </a>
+            </h3>
+        </header>
+
+        <!-- FORM SECTION -->
+        <section class="section">
+            <div class="container px-4">
+                <form id="myform" class="mx-auto mt-5 py-3">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <h3
+                                class="border-bottom pb-3 h2 font-weight-normal mb-4"
+                            >
+                                <span class="text-warning">Sign</span> Up
+                            </h3>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label
+                                for="firstname"
+                                class="form-label text-capitalize"
+                                >Firstname</label
+                            >
+                            <input
+                                type="text"
+                                id="firstname"
+                                class="form-control"
+                            />
+                            <span class="small hide text-danger">
+                                required!
+                            </span>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label
+                                for="lastname"
+                                class="form-label text-capitalize"
+                                >Lastname</label
+                            >
+                            <input
+                                type="text"
+                                id="lastname"
+                                class="form-control"
+                            />
+                            <span class="small hide text-danger">
+                                required!
+                            </span>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label
+                                for="email"
+                                class="form-label text-capitalize"
+                                >email</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-control"
+                            />
+                            <span class="small hide text-danger">
+                                required!
+                            </span>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <label
+                                for="phone"
+                                class="form-label text-capitalize"
+                                >Phone</label
+                            >
+                            <input type="tel" id="phone" class="form-control" />
+                            <span class="small hide text-danger">
+                                required!
+                            </span>
+                        </div>
+
+                        <div class="col-12 mt-5">
+                            <button
+                                class="btn btn-block btn-dark py-2"
+                                id="btn"
+                                data-name="add"
+                            >
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="mt-5">
+                    <h3
+                        class="text-left text-lg-center py-3 border-bottom mb-4 font-weight-normal"
+                    >
+                        <span class="text-warning">User's</span> Table
+                    </h3>
+
+                    <h5
+                        id="empty"
+                        class="text-muted text-center font-weight-light my-5"
+                    >
+                        Empty!
+                    </h5>
+
+                    <h5
+                        id="loading"
+                        class="text-muted text-center font-weight-light my-5"
+                    >
+                        Loading...
+                    </h5>
+
+                    <div class="table-responsive" id="table-container">
+                        <table class="table table-striped text-center">
+                            <thead class="bg-dark text-white">
+                                <tr>
+                                    <th class="font-weight-light">S/N</th>
+                                    <th class="font-weight-light">Firstname</th>
+                                    <th class="font-weight-light">Lastname</th>
+                                    <th class="font-weight-light">Email</th>
+                                    <th class="font-weight-light">Phone No.</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="small" id="table-screen"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

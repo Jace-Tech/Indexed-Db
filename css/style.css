@@ -1,0 +1,24 @@
+#myform {
+    width: 75%;
+}
+
+.required {
+    border: 2px solid red;
+}
+
+.required:focus {
+    border: 2px solid red;
+    box-shadow: none;
+}
+
+.hide,
+#empty,
+#table-container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #myform {
+        width: 100%;
+    }
+}
